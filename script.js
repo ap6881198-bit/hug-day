@@ -4,7 +4,7 @@ function nextPage(pageNumber, event) {
 
     document.getElementById("page" + pageNumber).classList.add('active');
 
-    // Sparkle effect (emoji burst)
+    // Emoji burst
     for (let i = 0; i < 20; i++) {
         let sparkle = document.createElement("div");
         sparkle.innerHTML = "🤗";
@@ -17,14 +17,46 @@ function nextPage(pageNumber, event) {
 
         setTimeout(() => sparkle.remove(), 1000);
     }
+
+    // Start typing when page 2 opens
+    if (pageNumber === 2) {
+        startTyping();
+    }
 }
 
-// Hug animation popup
+// TYPEWRITER EFFECT
+const text = `My Love 💕  
+
+A hug from you feels like home... 🤗  
+It heals everything, makes everything better,  
+and reminds me how lucky I am to have you.  
+
+On this Hug Day, I just want to hold you forever ❤️`;
+
+let i = 0;
+
+function startTyping() {
+    const element = document.getElementById("typewriter");
+    element.innerHTML = "";
+    i = 0;
+
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, 40);
+        }
+    }
+
+    type();
+}
+
+// Popup after hug animation
 setTimeout(() => {
     document.getElementById("popup").style.display = "block";
 }, 7000);
 
-// Spark animation CSS (added via JS)
+// Spark animation
 const style = document.createElement('style');
 style.innerHTML = `
 @keyframes explode {
