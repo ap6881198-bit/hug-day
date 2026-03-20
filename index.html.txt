@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Hug Day ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <h1 class="title">Happy Hug Day 🤗❤️</h1>
+    <button class="btn" onclick="nextPage(2, event)">Next 💖</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <div class="message-box">
+        <h2>My Love 💕</h2>
+        <p>
+            A hug from you feels like home... 🤗  
+            It heals everything, makes everything better,  
+            and reminds me how lucky I am to have you.  
+            On this Hug Day, I just want to hold you forever ❤️
+        </p>
+        <button class="btn" onclick="nextPage(3, event)">
+            Click me whenever you need a hug 🤗
+        </button>
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <div class="hug-container">
+        <div class="boy"></div>
+        <div class="girl"></div>
+    </div>
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+    <div class="popup-content">
+        <p>I always need your physical touch in the form of hug, my love ❤️🤗</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
