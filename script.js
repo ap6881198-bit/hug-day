@@ -18,13 +18,20 @@ function nextPage(pageNumber, event) {
         setTimeout(() => sparkle.remove(), 1000);
     }
 
-    // Start typing when page 2 opens
+    // Start typing
     if (pageNumber === 2) {
         startTyping();
     }
+
+    // 👉 SHOW POPUP AFTER HUG ANIMATION
+    if (pageNumber === 3) {
+        setTimeout(() => {
+            document.getElementById("popup").style.display = "block";
+        }, 3000); // wait for hug animation
+    }
 }
 
-// TYPEWRITER EFFECT
+// TYPEWRITER
 const text = `My Love 💕  
 
 A hug from you feels like home... 🤗  
@@ -51,12 +58,7 @@ function startTyping() {
     type();
 }
 
-// Popup after hug animation
-setTimeout(() => {
-    document.getElementById("popup").style.display = "block";
-}, 7000);
-
-// Spark animation
+// sparkle animation
 const style = document.createElement('style');
 style.innerHTML = `
 @keyframes explode {
