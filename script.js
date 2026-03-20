@@ -68,3 +68,25 @@ style.innerHTML = `
     }
 }`;
 document.head.appendChild(style);
+// 💖 Falling hearts + hugs
+function createEmojiRain() {
+    const emojis = ["❤️", "🤗"];
+
+    setInterval(() => {
+        let emoji = document.createElement("div");
+        emoji.classList.add("emoji");
+        emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.animationDuration = (3 + Math.random() * 5) + "s";
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 8000);
+
+    }, 300);
+}
+
+createEmojiRain();
