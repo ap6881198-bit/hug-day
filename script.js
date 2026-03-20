@@ -24,11 +24,11 @@ function nextPage(pageNumber, event) {
     }
 
     // 👉 SHOW POPUP AFTER HUG ANIMATION
-    if (pageNumber === 3) {
-        setTimeout(() => {
-            document.getElementById("popup").style.display = "block";
-        }, 3000); // wait for hug animation
-    }
+   if (pageNumber === 3) {
+    setTimeout(() => {
+        document.getElementById("popup").style.display = "block";
+    }, 5000); // delay increased for full animation
+}
 }
 
 // TYPEWRITER
